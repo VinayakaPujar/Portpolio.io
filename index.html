@@ -1,125 +1,336 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vinayaka | Portfolio</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Vinayaka Sharanappa Pujar - Computer Science and Engineering portfolio.">
+  <meta name="theme-color" content="#07111f">
+  <title>Vinayaka | CSE Student & Developer</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
   <script src="script.js" defer></script>
 </head>
+
 <body>
-  <!-- Navbar -->
-  <header>
-    <h1>Vinayaka</h1>
-    <nav>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#skills">Skills</a>
-      <a href="#education">Education</a>
-      <a href="#achievements">Achievements</a>
-      <a href="#contact">Contact</a>
+  <div class="page-glow glow-one"></div>
+  <div class="page-glow glow-two"></div>
+  <div class="scroll-progress" id="scrollProgress"></div>
+
+  <header class="site-header" id="top">
+    <a class="brand" href="#home" aria-label="Vinayaka home">
+      <span class="brand-mark">V</span>
+      <span>VINAYAKA<span class="dot">.</span></span>
+    </a>
+
+    <button class="menu-toggle" id="menuToggle" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+
+    <nav class="nav" id="nav">
+      <a class="nav-link active" href="#home">Home</a>
+      <a class="nav-link" href="#about">About</a>
+      <a class="nav-link" href="#experience">Experience</a>
+      <a class="nav-link" href="#projects">Projects</a>
+      <a class="nav-link" href="#skills">Skills</a>
+      <a class="nav-link" href="#education">Education</a>
+      <a class="nav-link" href="#achievements">Achievements</a>
+      <a class="nav-link" href="#contact">Contact</a>
     </nav>
   </header>
 
-  <!-- Hero Section -->
-  <section class="hero">
-    <div class="hero-content">
-      <img src="profile.jpg" alt="Vinayaka" class="profile-img" />
-      <h2>Computer Science and Engineering Student</h2>
-      <p>Passionate about Web Development, Artificial Intelligence, and Computer Vision.</p>
-      <a href="#contact" class="btn">Contact Me</a>
-    </div>
-  </section>
-
-  <!-- About Section -->
-  <section id="about">
-    <h2>About Me</h2>
-    <p>
-      I’m a 4th-year Computer Science and Engineering student at 
-      <b>Basaveshwar Engineering College, Bagalkot</b>. 
-      Skilled in Python, C++, JavaScript, Flask, and SQL with hands-on project experience in 
-      web development, computer vision, and NLP. Passionate about building innovative, real-world solutions.
-    </p>
-  </section>
-
-  <!-- Projects Section -->
-  <section id="projects">
-    <h2>Projects</h2>
-    <div class="project-container">
-      <div class="project-card">
-        <h3>Parking Management System</h3>
-        <p>
-          Designed a vehicle parking system to display available slots in real-time.
-          <br>🔧 Tech: Flask, OpenCV, MySQL
+  <main>
+    <section class="hero section" id="home">
+      <div class="hero-copy reveal">
+        <p class="eyebrow"><span class="status-dot"></span> Available for opportunities</p>
+        <h1>Hi, I'm <span class="gradient-text">Vinayaka</span><br><span class="outline-text">CSE Student & Developer</span></h1>
+        <p class="hero-description">
+          Computer Science and Engineering graduate with hands-on experience in web development,
+          AI/NLP and full-stack applications. I enjoy turning ideas into practical software solutions.
         </p>
+
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#projects">View My Work <span>↗</span></a>
+          <a class="btn btn-secondary" href="assets/Vinayaka_CV.pdf" download>Download CV <span>↓</span></a>
+        </div>
+
+        <div class="quick-links">
+          <a href="mailto:spvinayaka901@gmail.com">spvinayaka901@gmail.com</a>
+          <span>•</span>
+          <a href="tel:+919740108901">+91 9740108901</a>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Stock Price Predictor</h3>
-        <p>
-          Built linear and LSTM models to forecast stock prices using historical data.
-          <br>🔧 Tech: Python, scikit-learn, Keras
-        </p>
+
+      <div class="hero-visual reveal">
+        <div class="photo-orbit">
+          <div class="orbit orbit-a"></div>
+          <div class="orbit orbit-b"></div>
+          <div class="profile-frame">
+            <img src="assets/profile.jpg" alt="Vinayaka profile photo" class="profile-photo"
+                 onerror="this.onerror=null;this.src='assets/profile-placeholder.svg';">
+            <div class="photo-shine"></div>
+          </div>
+          <span class="float-card card-top">C++ · Python · Java</span>
+          <span class="float-card card-right">Full Stack</span>
+          <span class="float-card card-bottom">AI / NLP</span>
+        </div>
       </div>
-      <div class="project-card">
-        <h3>Fruit Image Classifier</h3>
-        <p>
-          Created a CNN with data augmentation and transfer learning to classify fruit images.
-          <br>🔧 Tech: TensorFlow, OpenCV
-        </p>
+    </section>
+
+    <section class="section about-section" id="about">
+      <div class="section-heading reveal">
+        <span>01</span>
+        <h2>About <em>Me</em></h2>
       </div>
-    </div>
-  </section>
+      <div class="about-grid">
+        <div class="about-card glass reveal">
+          <p class="large-copy">
+            Motivated Computer Science student with strong foundations in <strong>Web Development</strong>
+            and <strong>AI</strong>, with hands-on experience building real-world applications.
+          </p>
+          <p>
+            My interests include full-stack development, problem solving, AI/NLP and creating
+            user-focused applications. I am looking for a challenging software role where I can
+            apply my technical skills and continue learning.
+          </p>
+        </div>
 
-  <!-- Skills Section -->
-  <section id="skills">
-    <h2>Technical Skills</h2>
-    <div class="skills-container">
-      <div class="skill"><span>Python</span><div class="bar"><div style="width:90%"></div></div></div>
-      <div class="skill"><span>C++,C</span><div class="bar"><div style="width:85%"></div></div></div>
-      <div class="skill"><span>Flask</span><div class="bar"><div style="width:80%"></div></div></div>
-      <div class="skill"><span>SQL/MySQL</span><div class="bar"><div style="width:85%"></div></div></div>
-      <div class="skill"><span>Machine Learning</span><div class="bar"><div style="width:75%"></div></div></div>
-      <div class="skill"><span>Web Development</span><div class="bar"><div style="width:90%"></div></div></div>
-      <div class="skill"><span>Excel</span><div class="bar"><div style="width:90%"></div></div></div> 
-      <div class="skill"><span>Canva</span><div class="bar"><div style="width:90%"></div></div></div>
-      <div class="skill"><span>Ms Word, PowerPoint</span><div class="bar"><div style="width:90%"></div></div></div>
-    </div>
-  </section>
+        <div class="stats-grid reveal">
+          <div class="stat-card"><strong>7.74</strong><span>CGPA</span></div>
+          <div class="stat-card"><strong>3+</strong><span>Major Projects</span></div>
+          <div class="stat-card"><strong>1st</strong><span>Tech Ignite Prize</span></div>
+          <div class="stat-card"><strong>2026</strong><span>Graduation</span></div>
+        </div>
+      </div>
+    </section>
 
-  <!-- Education Section -->
-  <section id="education">
-    <h2>Education</h2>
-    <p>
-      <b>Bachelor of Engineering (B.E.)</b> in Computer Science and Engineering<br>
-      <b>Basaveshwar Engineering College, Bagalkot</b><br>
-      Year: 2022–2026 | CGPA: 7.77/10
-    </p>
-  </section>
+    <section class="section" id="experience">
+      <div class="section-heading reveal">
+        <span>02</span>
+        <h2>Experience</h2>
+      </div>
 
-  <!-- Achievements Section -->
-  <section id="achievements">
-    <h2>Achievements & Certifications</h2>
-    <ul>
-      <li>🏆 1st Prize in Tech Ignite 2.0 for outstanding project innovation</li>
-      <li>🖥️ Completed Springboard Linux Administration</li>
-      <li>🔹 IEEE Member and active participant in innovation events</li>
-      <li>🥇 Represented VTU Men’s Kho-Kho (2024 & 2025) and secured 1st prize</li>
-    </ul>
-  </section>
+      <article class="experience-card glass reveal">
+        <div class="experience-head">
+          <div>
+            <p class="kicker">Feb 2026 — May 2026</p>
+            <h3>Full Stack Developer Intern</h3>
+            <p class="company">Vision Astra EV Academy</p>
+          </div>
+          <span class="experience-badge">Internship</span>
+        </div>
 
-  <!-- Contact Section -->
-  <section id="contact">
-    <h2>Contact</h2>
-    <p>Email: <a href="mailto:spvinayaka901@gmail.com">spvinayaka901@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919740108901">+91 9740108901</a></p>
-    <div class="social-links">
-      <a href="https://github.com/vsp605" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/vinayaka-pujar-910aa5263" target="_blank">LinkedIn</a>
-    </div>
-  </section>
+        <div class="experience-content">
+          <div class="experience-project">
+            <span class="mini-label">Project</span>
+            <h4>Smart EV Fleet Monitoring & Charging Ecosystem</h4>
+            <p>MERN stack application for fleet monitoring and smart charging workflows.</p>
+          </div>
+          <ul class="check-list">
+            <li>Developed a real-time dashboard for battery status, vehicle location and charging data.</li>
+            <li>Built RESTful APIs and integrated frontend and backend services.</li>
+            <li>Worked on database design for vehicle, battery and charging-session data.</li>
+            <li>Collaborated with a team to build scalable full-stack solutions.</li>
+          </ul>
+        </div>
+      </article>
+    </section>
+
+    <section class="section" id="projects">
+      <div class="section-heading reveal">
+        <span>03</span>
+        <h2>Featured <em>Projects</em></h2>
+      </div>
+
+      <div class="projects-grid">
+        <article class="project-card featured reveal">
+          <div class="project-number">01</div>
+          <div class="project-icon">⚡</div>
+          <p class="project-type">MERN · Full Stack</p>
+          <h3>Smart EV Fleet Monitoring & Charging Ecosystem</h3>
+          <p>
+            A fleet-management ecosystem designed to monitor vehicle battery status, location and
+            charging data through a real-time dashboard, with RESTful backend services.
+          </p>
+          <div class="tags"><span>MongoDB</span><span>Express.js</span><span>React</span><span>Node.js</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">02</div>
+          <div class="project-icon">🤖</div>
+          <p class="project-type">AI · NLP</p>
+          <h3>AI Video Quiz & Notes Generation Platform</h3>
+          <p>
+            AI-powered platform using NLP and Transformers to generate summaries and quizzes from
+            educational videos, including speech-to-text and video analysis.
+          </p>
+          <div class="tags"><span>Python</span><span>NLP</span><span>Transformers</span><span>Speech-to-Text</span></div>
+        </article>
+
+        <article class="project-card reveal">
+          <div class="project-number">03</div>
+          <div class="project-icon">🅿️</div>
+          <p class="project-type">Web · Database</p>
+          <h3>Parking Management System</h3>
+          <p>
+            Flask-based web application for real-time parking slot tracking and management with
+            MySQL database integration and a user-friendly slot-allocation workflow.
+          </p>
+          <div class="tags"><span>Flask</span><span>MySQL</span><span>HTML</span><span>CSS</span></div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="skills">
+      <div class="section-heading reveal">
+        <span>04</span>
+        <h2>Technical <em>Skills</em></h2>
+      </div>
+
+      <div class="skills-layout">
+        <div class="skill-panel glass reveal">
+          <p class="kicker">Programming Languages</p>
+          <div class="skill-pills">
+            <span>C++</span><span>Python</span><span>C</span><span>Java (Basics)</span>
+          </div>
+        </div>
+
+        <div class="skill-panel glass reveal">
+          <p class="kicker">Web Technologies</p>
+          <div class="skill-pills">
+            <span>HTML</span><span>CSS</span><span>JavaScript</span><span>Flask</span><span>MERN</span>
+          </div>
+        </div>
+
+        <div class="skill-panel glass reveal">
+          <p class="kicker">Database Systems</p>
+          <div class="skill-pills">
+            <span>SQL</span><span>MySQL</span><span>MongoDB</span>
+          </div>
+        </div>
+
+        <div class="skill-panel glass reveal">
+          <p class="kicker">Core Concepts</p>
+          <div class="skill-pills">
+            <span>DSA</span><span>OOPs</span><span>Operating Systems</span><span>DBMS</span><span>Computer Networks</span>
+          </div>
+        </div>
+
+        <div class="skill-panel glass reveal wide">
+          <p class="kicker">Tools</p>
+          <div class="skill-pills">
+            <span>VS Code</span><span>Jupyter Notebook</span><span>GitHub</span><span>Canva</span><span>Excel</span><span>Eclipse</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="education">
+      <div class="section-heading reveal">
+        <span>05</span>
+        <h2>Education</h2>
+      </div>
+
+      <div class="education-list">
+        <article class="education-card glass reveal">
+          <span class="edu-year">2022 — 2026</span>
+          <div>
+            <p class="kicker">Bachelor of Engineering</p>
+            <h3>Computer Science & Engineering</h3>
+            <p>Basaveshwar Engineering College, Bagalkot</p>
+          </div>
+          <strong class="score">7.74<br><small>CGPA</small></strong>
+        </article>
+
+        <article class="education-card glass reveal">
+          <span class="edu-year">2020 — 2022</span>
+          <div>
+            <p class="kicker">Pre-University</p>
+            <h3>Shree Gavisiddheswar PU and Degree College</h3>
+            <p>Koppal</p>
+          </div>
+          <strong class="score">90.5%<br><small>Percentage</small></strong>
+        </article>
+
+        <article class="education-card glass reveal">
+          <span class="edu-year">2017 — 2020</span>
+          <div>
+            <p class="kicker">High School</p>
+            <h3>S S P U College</h3>
+            <p>Alwandi, Koppal</p>
+          </div>
+          <strong class="score">92.96%<br><small>Percentage</small></strong>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="achievements">
+      <div class="section-heading reveal">
+        <span>06</span>
+        <h2>Achievements & <em>Certifications</em></h2>
+      </div>
+
+      <div class="achievement-grid">
+        <article class="achievement-card glass reveal">
+          <span class="achievement-icon">🏆</span>
+          <div>
+            <h3>1st Prize — Tech Ignite 2.0</h3>
+            <p>Recognized for outstanding project innovation.</p>
+          </div>
+        </article>
+
+        <article class="achievement-card glass reveal">
+          <span class="achievement-icon">🥇</span>
+          <div>
+            <h3>VTU Men's Kho-Kho</h3>
+            <p>Represented the VTU team in 2024 & 2025 and secured 1st place.</p>
+          </div>
+        </article>
+
+        <article class="achievement-card glass reveal">
+          <span class="achievement-icon">🐧</span>
+          <div>
+            <h3>Linux Administration Certification</h3>
+            <p>Infosys Springboard — filesystem management, shell commands and administration basics.</p>
+          </div>
+        </article>
+
+        <article class="achievement-card glass reveal">
+          <span class="achievement-icon">◈</span>
+          <div>
+            <h3>IEEE Student Member</h3>
+            <p>Active participation in technical and innovation events.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <section class="section contact-section" id="contact">
+      <div class="contact-card glass reveal">
+        <div>
+          <p class="eyebrow">07 · CONTACT</p>
+          <h2>Let's build something <span class="gradient-text">useful.</span></h2>
+          <p>I'm open to software development opportunities, internships and collaborative projects.</p>
+        </div>
+
+        <div class="contact-links">
+          <a href="mailto:spvinayaka901@gmail.com"><span>✉</span> Email</a>
+          <a href="tel:+919740108901"><span>☎</span> Phone</a>
+          <a href="https://www.linkedin.com/in/vinayaka-pujar-910aa5263/" target="_blank" rel="noopener"><span>in</span> LinkedIn</a>
+          <a href="https://github.com/vsp605" target="_blank" rel="noopener"><span>⌘</span> GitHub</a>
+          <a href="https://leetcode.com/" target="_blank" rel="noopener"><span>LC</span> LeetCode</a>
+        </div>
+      </div>
+    </section>
+  </main>
 
   <footer>
-    <p>© 2025 Vinayaka| Portfolio</p>
+    <p>© <span id="year"></span> Vinayaka Sharanappa Pujar</p>
+    <a href="#top">Back to top ↑</a>
   </footer>
+
+  <button class="back-top" id="backTop" aria-label="Back to top">↑</button>
 </body>
 </html>
